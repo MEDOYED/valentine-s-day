@@ -17,6 +17,7 @@
 
 .card {
   z-index: 1000;
+  position: relative;
 
   background-image: radial-gradient(
     circle,
@@ -42,4 +43,48 @@
   box-shadow: 2px 1px 62px 44px #ce72b1;
   -webkit-box-shadow: 2px 1px 62px 44px #ce72b1;
   -moz-box-shadow: 2px 1px 62px 44px #ce72b1;
+}
+
+.iconsList {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  color: #540000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.buttonsContainer {
+  position: relative;
+  height: 100%;
+}
+
+.button {
+  background-color: #8a0000;
+  color: #fff;
+  padding: 12px 17px;
+  border-radius: 7px;
+  font-size: 30px;
+}
+
+.winMessage {
+  font-size: 40px;
+  text-align: center;
+  color: #810074;
+}
+
+.video {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-40%);
 }
