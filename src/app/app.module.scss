@@ -92,4 +92,6 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-40%);
+  background: transparent !important; /* на всяк випадок */
+  mix-blend-mode: normal;
 }

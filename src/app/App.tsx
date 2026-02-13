@@ -3,6 +3,7 @@ import cn from "classnames";
 
 import LoveLetterIcon from "./love-letter-icon";
 import catWithHeartVideo from "./cat-with-heart-video.webm";
+import catWithHeartVideoMov from "./cat-with-heart-hevc.mov";
 
 import s from "./app.module.scss";
 import HeartValentineIcon from "./heart-valentines-icon";
@@ -75,8 +76,11 @@ function App() {
         </div>
 
         {yesCount === 0 && noCount === 0 && (
-          <video className={s.video} autoPlay loop muted>
+          <video className={s.video} autoPlay loop muted playsInline>
+            {/* WebM VP9 з альфа-каналом для Chrome/Firefox */}
             <source src={catWithHeartVideo} type="video/webm" />
+            {/* ProRes 4444 для Safari/iOS з альфа-каналом */}
+            <source src={catWithHeartVideoMov} type='video/quicktime; codecs="ap4h"' />
           </video>
         )}
       </div>
