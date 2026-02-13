@@ -49,17 +49,26 @@ function App() {
               className={cn(s.button)}
               onClick={handleYesClick}
               key={index}
-              style={{
-                position: "absolute",
-                top: `${getRandomInt(100)}%`,
-                left: `${getRandomInt(100)}%`,
-              }}>
+              style={
+                index === 0
+                  ? {
+                      position: "absolute",
+                      top: `0%`,
+                      left: `60%`,
+                    }
+                  : {
+                      position: "absolute",
+                      top: `${getRandomInt(100)}%`,
+                      left: `${getRandomInt(100)}%`,
+                      zIndex: 110,
+                    }
+              }>
               Так
             </button>
           ))}
 
           {[...Array(noCount)].map((_, index) => (
-            <button className={cn(s.button)} key={index} onClick={handleNoClick}>
+            <button className={cn(s.button, s.buttonNo)} key={index} onClick={handleNoClick}>
               Ні
             </button>
           ))}
