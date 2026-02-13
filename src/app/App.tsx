@@ -1,9 +1,9 @@
-import "./App.css";
+import s from "./app.module.scss";
 
 function App() {
   return (
-    <div>
-      <div></div>
+    <div className={s.background}>
+      <div className={s.card}></div>
     </div>
   );
 }
