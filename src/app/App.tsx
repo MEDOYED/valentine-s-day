@@ -10,13 +10,13 @@ import HeartValentineIcon from "./heart-valentines-icon";
 function App() {
   const [yesCount, setYesCount] = useState(1);
   const [noCount, setNoCount] = useState(1);
-  const [isIOS, setIsIOS] = useState(false);
+  // const [isIOS, setIsIOS] = useState(false);
 
-  useEffect(() => {
-    // Детекція iOS
-    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    setIsIOS(iOS);
-  }, []);
+  // useEffect(() => {
+  //   // Детекція iOS
+  //   const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  //   setIsIOS(iOS);
+  // }, []);
 
   const getRandomInt = (max: number) => {
     return Math.floor(Math.random() * max);
@@ -81,11 +81,16 @@ function App() {
           ))}
         </div>
 
-        {yesCount === 0 && noCount === 0 && !isIOS && (
+        {yesCount === 0 && noCount === 0 && (
           <video className={s.video} autoPlay loop muted playsInline>
             <source src={catWithHeartVideo} type="video/webm" />
           </video>
         )}
+        {/* {yesCount === 0 && noCount === 0 && !isIOS && (
+          <video className={s.video} autoPlay loop muted playsInline>
+            <source src={catWithHeartVideo} type="video/webm" />
+          </video>
+        )} */}
       </div>
     </div>
   );
