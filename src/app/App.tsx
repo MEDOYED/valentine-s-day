@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+// import { useState, useEffect } from "react";
 import cn from "classnames";
 
 import LoveLetterIcon from "./love-letter-icon";
