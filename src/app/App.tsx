@@ -61,8 +61,8 @@ function App() {
                     }
                   : {
                       position: "absolute",
-                      top: `${getRandomInt(100)}%`,
-                      left: `${getRandomInt(100)}%`,
+                      top: `${getRandomInt(85)}%`,
+                      left: `${getRandomInt(85)}%`,
                       zIndex: 110,
                     }
               }>
