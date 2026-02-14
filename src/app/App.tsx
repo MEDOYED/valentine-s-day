@@ -3,7 +3,8 @@ import { useState } from "react";
 import cn from "classnames";
 
 import LoveLetterIcon from "./love-letter-icon";
-import catWithHeartVideo from "./cat-with-heart-video.webm";
+// import catWithHeartVideo from "./cat-with-heart-video.webm";
+import catLoveSticker from "./cat-love-sticker.gif";
 
 import s from "./app.module.scss";
 import HeartValentineIcon from "./heart-valentines-icon";
@@ -83,9 +84,7 @@ function App() {
         </div>
 
         {yesCount === 0 && noCount === 0 && (
-          <video className={s.video} autoPlay loop muted playsInline>
-            <source src={catWithHeartVideo} type="video/webm" />
-          </video>
+          <img className={s.video} src={catLoveSticker} alt="Cat love sticker" />
         )}
         {/* {yesCount === 0 && noCount === 0 && !isIOS && (
           <video className={s.video} autoPlay loop muted playsInline>
