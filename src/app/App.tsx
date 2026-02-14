@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cn from "classnames";
 
 import LoveLetterIcon from "./love-letter-icon";
 import catWithHeartVideo from "./cat-with-heart-video.webm";
-import VideoWithAlpha from "./VideoWithAlpha";
 
 import s from "./app.module.scss";
 import HeartValentineIcon from "./heart-valentines-icon";
@@ -11,6 +10,13 @@ import HeartValentineIcon from "./heart-valentines-icon";
 function App() {
   const [yesCount, setYesCount] = useState(1);
   const [noCount, setNoCount] = useState(1);
+  const [isIOS, setIsIOS] = useState(false);
+
+  useEffect(() => {
+    // Детекція iOS
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    setIsIOS(iOS);
+  }, []);
 
   const getRandomInt = (max: number) => {
     return Math.floor(Math.random() * max);
@@ -75,8 +81,10 @@ function App() {
           ))}
         </div>
 
-        {yesCount === 0 && noCount === 0 && (
-          <VideoWithAlpha src={catWithHeartVideo} className={s.video} />
+        {yesCount === 0 && noCount === 0 && !isIOS && (
+          <video className={s.video} autoPlay loop muted playsInline>
+            <source src={catWithHeartVideo} type="video/webm" />
+          </video>
         )}
       </div>
     </div>
