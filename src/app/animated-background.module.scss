@@ -1,0 +1,58 @@
+// .AnimatedBackground {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 50;
+//   background-color: #fff;
+//   opacity: 0.5;
+
+//   display: flex;
+//   gap: 15px;
+// }
+
+.AnimatedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background-color: #fff;
+  opacity: 0.5;
+  overflow: hidden;
+  pointer-events: none; // Щоб іконки не заважали кліку по елементах
+}
+.fallingIcon {
+  position: absolute;
+  top: -100px; // Початкова позиція над екраном
+}
+
+.fallHeartIcon {
+  animation: fallHeart linear infinite;
+}
+
+.fallParachuteIcon {
+  animation: fallParachute linear infinite;
+}
+
+@keyframes fallHeart {
+  0% {
+    top: -100px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 100vh;
+    transform: rotate(360deg); // Додатково обертання для краси
+  }
+}
+
+@keyframes fallParachute {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 100vh;
+  }
+}
