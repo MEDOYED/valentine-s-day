@@ -1,0 +1,40 @@
+.FirstScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: #740000;
+
+  color: azure;
+  font-size: 40px;
+  // opacity: 0.5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  transition: transform 0.8s ease-in-out;
+  transform: scale(1);
+
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.halfOpen {
+  transform: scale(1.2) translateY(25%);
+}
+.fullOpen {
+  transform: scale(1) translateY(100%);
+
+  pointer-events: none; // Відключаємо кліки після повного відкриття
+}

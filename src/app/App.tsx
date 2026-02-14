@@ -8,6 +8,7 @@ import catLoveSticker from "./cat-love-sticker.gif";
 import s from "./app.module.scss";
 import HeartValentineIcon from "./heart-valentines-icon";
 import AnimatedBackground from "./animated-background";
+import FirstScreen from "./first-screen";
 
 function App() {
   const [yesCount, setYesCount] = useState(1);
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className={s.background}>
+      <FirstScreen />
       <AnimatedBackground />
       <div className={s.card}>
         <ul className={s.iconsList}>
